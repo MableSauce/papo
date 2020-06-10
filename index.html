@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            /* Chat containers */
+            .container {
+              border: 2px solid #dedede;
+              background-color: #f1f1f1;
+              border-radius: 5px;
+              padding: 10px;
+              margin: 10px 0;
+            }
+            /* Darker chat container */
+            .darker {
+              border-color: #ccc;
+              background-color: #ddd;
+            }
+            /* Clear floats */
+            .container::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+            /* Style images */
+            .container img {
+              float: left;
+              max-width: 60px;
+              width: 100%;
+              margin-right: 20px;
+              border-radius: 50%;
+            }
+            /* Style the right image */
+            .container img.right {
+              float: right;
+              margin-left: 20px;
+              margin-right:0;
+            }
+            /* Style time text */
+            .time-right {
+              float: right;
+              color: #aaa;
+            }
+            /* Style time text */
+            .time-left {
+              float: left;
+              color: #999;
+            }
+        </style>
+    </head>
+    <body>
+        <div align = "center"><h1>papo</h1></div>
+        
+        
+        <div id="chatBox">
+        
+            </div>
+        
+        <div>
+                <p id="typeNotifier" style="display: none;">AI papo is typing...</p>
+                <textarea id="userInput" rows="4" cols="190" placeholder="Type here to send message AI Brandon"></textarea>
+                <button style="display: none;" id="myBtn" onclick="javascript:alert('Hello World!')">Button</button>
+        </div>  
+        <script>
+            function random(items){
+                var item = items[Math.floor(Math.random() * items.length)]; 
+                return item;
+             }
+            var input = document.getElementById("userInput");
+            let aIResponses = ['Really now?', 'If you say so...', 'I am really not sure', 'Lebron James'];
+            let aIResponseTimes = [5000, 3000, 8000, 4000, 2000];
+            input.addEventListener("keyup", function(event) {
+                let typeNotifier = document.getElementById("typeNotifier");
+                let chatBox = document.getElementById("chatBox");
+                let message = input.value;
+                console.log(input.innerHTML);
+                let newMessageBox = document.createElement('div');
+                newMessageBox.classList.add("container");
+                newMessageBox.innerHTML = `
+                    <img src="/w3images/bandmember.jpg" alt="Avatar">
+                    <p>${message}</p>
+                    <span class="time-right">11:02</span>
+                    `;
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    chatBox.appendChild(newMessageBox);
+                    console.log(input);
+                    input.value = " ";
+                     typeNotifier.style.display = "block";
+                   
+                    messege = mesage.toString();
+                    messege = mesage.replace(/(\r\n|\r)/gm,""); 
+                    messege = mesage.toLowerCase();
+                    
+                    
+                    if (message.includes("how are you") ) {
+                        text = "I'm pretty level headed since I'm a computer program.";
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("hay papo")){
+                       text = "yea how bout you"; 
+                    }else if (message.includes("how old are you")){
+                       text = "uuuummmmm... 13?/10?"; 
+                    }else if (message.includes("wana play a game")){
+                       text = "naw your dookie!"; 
+                    }else if (message.includes("am i butifull")){
+                       text = "i will have to agree with your mirror"; 
+                    }else if (message.includes("its broken")){
+                       text = "exatcly"; 
+                    }else if (message.includes("who is joandy")){
+                       text = "joandy=nii-san=Giorno Giovanna=qa"; 
+                    }else if (message.includes("who is patrik")){
+                       text = "patrik?"; 
+                    }else if (message.includes("")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }else if (message.includes("What is your favorite color?")){
+                       text = "All of 'em."; 
+                    }
+                    else{
+                        text = "Mmmm. My responses are limited. Looking forward to the Weekend.";
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Message javascript
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    console.log(message);
+                    console.log(text);
+                    setTimeout(function(){ 
+                        let newaIResponse = document.createElement('div');
+                        newaIResponse.classList.add("container");
+                        newaIResponse.classList.add("darker");
+                        newaIResponse.innerHTML = `
+                        <img src="/w3images/bandmember.jpg" alt="Avatar">
+                        <p>${text}</p>
+                        <span class="time-right">11:02</span>
+                        `;
+                        chatBox.appendChild(newaIResponse);
+                        typeNotifier.style.display = "none";
+                    }, random(aIResponseTimes));
+                }
+            });
+        </script>
+    </body>
+</html>
